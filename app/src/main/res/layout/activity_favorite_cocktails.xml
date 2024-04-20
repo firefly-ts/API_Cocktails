@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".activities.FavoriteCocktailsActivity">
+
+    <TextView
+        android:id="@+id/favoriteCocktails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:text="@string/cocktail_favorite"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/favoriteCocktails"
+        android:id="@+id/recyclerFavoriteView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/grey"
+        android:layout_above="@id/button_delete"
+         />
+
+
+    <Button
+        android:id="@+id/button_delete"
+        android:onClick="clickDeleteButton"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:layout_weight="1"
+        android:text="Delete Favorite cocktails" />
+
+</RelativeLayout>
